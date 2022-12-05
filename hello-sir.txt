@@ -1,0 +1,26 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+
+const container = document.getElementById('root');
+const root = ReactDOM.createRoot(container);
+
+let currDate= new Date();
+let greeting = '';
+currDate = currDate.getHours();
+
+if(currDate >= 1 && currDate < 12) {
+  greeting = 'Good Morning';
+}
+else if(currDate >= 12 && currDate < 19) {
+  greeting = 'Good Afternoon';
+}
+else {
+  greeting = 'Good Night';
+}
+
+root.render(
+  <>
+    <div className='root-div'>Hello Sir, {greeting}</div>
+  </>
+)
